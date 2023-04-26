@@ -1,0 +1,29 @@
+@media (min-height: 600px) and (min-width: 768px) {
+  .first-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    transform: translateY(-16px);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media (max-height: 600px) {
+  .first-page {
+    display: block;
+    height: auto;
+    padding-top: 180px;
+    padding-bottom: 270px;
+  }
+}
+
+.first-mobile {
+  display: block;
+  height: auto;
+  margin-bottom: 80px;
+}
+
+.first-page-wrap {
+  position: relative;
+  width: 100%;
+}

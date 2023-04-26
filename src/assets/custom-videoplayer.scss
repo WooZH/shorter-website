@@ -1,0 +1,20 @@
+.vjs-shorter.video-js .vjs-big-play-button {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0;
+  width: 3em;
+  height: 1.5em;
+}
+.vjs-shorter.video-js {
+  width: 50vw;
+  height: calc(50vw / 16 * 9);
+  background-color: transparent;
+}
+.vjs-shorter.video-js .vjs-tech {
+  width: 100%;
+  // height: calc(50vw / 16 * 9);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

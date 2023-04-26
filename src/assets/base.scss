@@ -1,0 +1,195 @@
+// var
+$primaryColor: #ef814e;
+$normalColor: rgba(239, 129, 78, 0.15);
+$borderColor: #e9e9e9;
+
+$fontColor: #333333;
+$fontStrongColor: $primaryColor;
+$describeFontColor: #999999;
+$titleFontFamily: "Haas Grot Disp";
+$contextFontFamily: "Haas Grot Text";
+$defaultSolidBorder: 1px solid $borderColor;
+$defaultBGColor: #fffdfc;
+$defaultWhiteColor: #fcfbfa;
+
+$defaultShadow: 0 24px 38px rgba(#000000, 0.08), 0 10px 46px rgba(#000000, 0.04), 0 12px 16px rgba(#000000, 0.06);
+$tagRadius: 4px;
+$btnRadius: 8px;
+$cardRadius: 16px;
+$dialogRadius: 24px;
+
+// normalize
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body,
+p,
+ul,
+li,
+table,
+tr,
+td {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+i {
+  font-style: normal;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+html body {
+  font-family: "Haas Grot Text", system-ui, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Ubuntu,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+// mixin
+@mixin trans {
+  transition: all 0.3s;
+}
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexVerticalCenter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@mixin round {
+  border-radius: 50%;
+}
+
+#app {
+  height: auto;
+  overflow-x: auto;
+  min-height: 100vh;
+  background-color: $defaultBGColor;
+}
+
+.title {
+  font-family: $titleFontFamily;
+  color: $fontColor;
+}
+
+.more {
+  cursor: pointer;
+}
+.strong {
+  color: $primaryColor;
+}
+
+.btn {
+  width: 240px;
+  height: 60px;
+  border-radius: $btnRadius;
+  font-size: 20px;
+  @include flexCenter;
+  font-weight: 400;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.btn-primary {
+  color: $defaultWhiteColor;
+  background-color: $primaryColor;
+  &:link {
+    color: $defaultWhiteColor;
+  }
+  &:visited {
+    color: $defaultWhiteColor;
+  }
+  &:hover {
+    color: $defaultWhiteColor;
+    background-color: mix($primaryColor, #ffffff, 90%);
+  }
+  &:active {
+    color: $defaultWhiteColor;
+  }
+}
+.btn-normal {
+  color: $primaryColor;
+  background-color: $normalColor;
+  &:link {
+    color: $primaryColor;
+  }
+  &:visited {
+    color: $primaryColor;
+  }
+  &:active {
+    color: $primaryColor;
+  }
+}
+.btn-text {
+  color: $primaryColor;
+  background-color: transparent;
+  &:link {
+    color: $primaryColor;
+  }
+  &:visited {
+    color: $primaryColor;
+  }
+  &:active {
+    color: $primaryColor;
+  }
+}
+
+.btn-ghost {
+  display: block;
+  @include flexCenter;
+  width: 128px;
+  height: 34px;
+  border-radius: 5.63px;
+  border: $defaultSolidBorder;
+  background-color: transparent;
+  color: $primaryColor;
+  border-color: $primaryColor;
+  font-size: 14px;
+  line-height: 24px;
+  &:link {
+    color: $primaryColor;
+  }
+  &:visited {
+    color: $primaryColor;
+  }
+  &:hover {
+    color: #fcfbfa;
+    background-color: $primaryColor;
+  }
+  &:active {
+    color: $primaryColor;
+  }
+}
