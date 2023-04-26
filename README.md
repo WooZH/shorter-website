@@ -1,4 +1,6 @@
-# Vue 3 + Vite
-* A responsive website
+## A responsive website for ShorterFinance
 
-* For shorterFinance 
+1. yarn 
+2. yarn dev
+
+Now you can see it.
